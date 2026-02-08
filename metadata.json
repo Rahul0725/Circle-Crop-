@@ -1,5 +1,5 @@
 {
-  "name": "Circle Crop",
+  "name": "Habib Crop",
   "description": "A high-fidelity circular image cropper featuring an 'Apple Jeli' design with fluid animations, glassmorphism, and an intuitive touch-first interface.",
   "requestFramePermissions": [
     "camera"

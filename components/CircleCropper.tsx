@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { CropState, ExportResult } from '../types';
 
@@ -193,7 +192,7 @@ export const CircleCropper: React.FC<CircleCropperProps> = ({ sourceSrc, isVideo
           <input 
             type="range" min="0.1" max="5" step="0.01" value={state.zoom} 
             onChange={(e) => setState(prev => ({ ...prev, zoom: parseFloat(e.target.value) }))}
-            className="w-full accent-[#ff758c]"
+            className="w-full accent-[#9333ea]"
           />
         </div>
         <div className="space-y-2">
@@ -204,7 +203,7 @@ export const CircleCropper: React.FC<CircleCropperProps> = ({ sourceSrc, isVideo
           <input 
             type="range" min="-180" max="180" step="1" value={state.rotation} 
             onChange={(e) => setState(prev => ({ ...prev, rotation: parseInt(e.target.value) }))}
-            className="w-full accent-[#ff758c]"
+            className="w-full accent-[#9333ea]"
           />
         </div>
       </div>

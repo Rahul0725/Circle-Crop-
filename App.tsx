@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { CircleCropper } from './components/CircleCropper';
 import { JeliButton } from './components/JeliButton';
@@ -169,7 +168,7 @@ const App: React.FC = () => {
     const blob = new Blob([svgString], { type: 'image/svg+xml' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = `jeli_video_container_${Date.now()}.svg`;
+    link.download = `habib_video_container_${Date.now()}.svg`;
     link.click();
   };
 
@@ -198,7 +197,7 @@ const App: React.FC = () => {
       const blob = new Blob(chunks, { type: 'video/webm' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = `jeli_video_crop_${Date.now()}.webm`;
+      link.download = `habib_video_crop_${Date.now()}.webm`;
       link.click();
       setIsProcessing(false);
       setRecordingProgress(0);
@@ -249,7 +248,7 @@ const App: React.FC = () => {
     if (currentFormat === 'png') {
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = `jeli_image_${timestamp}.png`;
+      link.download = `habib_image_${timestamp}.png`;
       link.click();
     } else if (currentFormat === 'jpg') {
       const canvas = document.createElement('canvas');
@@ -271,7 +270,7 @@ const App: React.FC = () => {
           if (b) {
             const l = document.createElement('a');
             l.href = URL.createObjectURL(b);
-            l.download = `jeli_image_${timestamp}.jpg`;
+            l.download = `habib_image_${timestamp}.jpg`;
             l.click();
           }
         }, 'image/jpeg', 0.9);
@@ -293,7 +292,7 @@ const App: React.FC = () => {
       const b = new Blob([svg], { type: 'image/svg+xml' });
       const l = document.createElement('a');
       l.href = URL.createObjectURL(b);
-      l.download = `jeli_image_${timestamp}.svg`;
+      l.download = `habib_image_${timestamp}.svg`;
       l.click();
     }
   };
@@ -313,11 +312,11 @@ const App: React.FC = () => {
         {!sourceData && !exportData && (
           <header className="text-center mb-10 space-y-3 animate-in fade-in slide-in-from-top-8 duration-700">
             <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/50 shadow-sm mb-2">
-              <Sparkles size={14} className="text-[#ff758c]" />
+              <Sparkles size={14} className="text-[#9333ea]" />
               <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">Premium Circle Studio</span>
             </div>
             <h1 className="text-5xl font-[900] text-slate-800 tracking-tighter">
-              Jeli<span className="text-[#ff758c]">Circle</span>
+              Habib<span className="text-[#9333ea]">Crop</span>
             </h1>
           </header>
         )}
@@ -332,9 +331,6 @@ const App: React.FC = () => {
               
               <div className="space-y-3">
                 <h2 className="text-3xl font-black text-slate-800 tracking-tight">AI-Powered Studio</h2>
-                <p className="text-slate-500 font-medium px-4">
-                  Circular cropping for video & image. Remove backgrounds with Gemini magic.
-                </p>
               </div>
 
               <div className="flex flex-col gap-4 pt-2">
@@ -410,7 +406,7 @@ const App: React.FC = () => {
                     <JeliButton 
                       variant="secondary"
                       onClick={removeBackground} 
-                      className="w-full py-4 rounded-[2rem] text-sm border-[#ff758c]/30 text-[#ff758c]"
+                      className="w-full py-4 rounded-[2rem] text-sm border-[#9333ea]/30 text-[#9333ea]"
                     >
                       <Wand2 size={20} /> AI Remove BG
                     </JeliButton>
